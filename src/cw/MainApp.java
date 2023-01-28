@@ -1,12 +1,12 @@
 package cw;
 
 /* Wolves have been reintroduced to Great Britain. You are a sheep farmer, and are now plagued by wolves which pretend to be sheep.
-* Warn the sheep in front of the wolf that it is about to be eaten.
-* Remember that you are standing at the front of the queue which is at the end of the array.
-* If the wolf is the closest animal to you, return "Pls go away and stop eating my sheep".
-* Otherwise, return "Oi! Sheep number N! You are about to be eaten by a wolf!" where N is the sheep's position in the queue.
-* Note: there will always be exactly one wolf in the array.
-*/
+ * Warn the sheep in front of the wolf that it is about to be eaten.
+ * Remember that you are standing at the front of the queue which is at the end of the array.
+ * If the wolf is the closest animal to you, return "Pls go away and stop eating my sheep".
+ * Otherwise, return "Oi! Sheep number N! You are about to be eaten by a wolf!" where N is the sheep's position in the queue.
+ * Note: there will always be exactly one wolf in the array.
+ */
 
 public class MainApp {
     public static void main(String[] args) {
@@ -21,13 +21,11 @@ public class MainApp {
         String str = "";
 
         if (arr[l - 1].equals("wolf")) {
-            str =  "Pls go away and stop eating my sheep";
-        }
-
-        else {
+            str = "Pls go away and stop eating my sheep";
+        } else {
             for (int i = l - 2, j = 2; i >= 0; i--, j++) {
                 if (arr[i].equals("wolf")) {
-                    str =  "Oi! Sheep number " + (j - 1) + "! You are about to be eaten by a wolf!";
+                    str = "Oi! Sheep number " + (j - 1) + "! You are about to be eaten by a wolf!";
                     break;
                 }
             }
